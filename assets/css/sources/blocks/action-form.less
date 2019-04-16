@@ -1,0 +1,44 @@
+.action-form{
+    background: url('../images/backgroundyellow.png') no-repeat center/cover;
+
+.form{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding:0;
+        background: inherit;
+        padding:3rem 0 2rem 0;
+        .media(768px, {
+            flex-direction: column;
+          });
+        
+        &__input{
+            width: 22rem;
+            margin-right:1.6rem;
+            padding-bottom: 0;
+            .media(768px, {
+                margin-right:0;
+                padding-bottom: 1rem;
+              });
+        }
+        &__btn{
+            padding: 2rem 5.1rem 2rem 5.2rem;
+
+            &--big{
+                padding: 1.5rem 5.1rem 2rem 5.2rem;
+                margin:0;
+                height: inherit;
+                &:hover{
+                    transform: none;
+                }  
+            }
+        }
+.action-btn{
+            background: url('../images/backred.png') no-repeat center/cover;
+            &:hover{
+                transform: scale(1.1)
+            }
+        }
+}
+}

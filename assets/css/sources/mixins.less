@@ -1,0 +1,33 @@
+.flex() {
+  display: flex;
+}
+
+.justify (@align) {
+  justify-content: @align;
+}
+
+.wrap(@type) {
+  flex-wrap: @type;
+}
+
+// inline-block
+.ib (@align) {
+  display: inline-block;
+  vertical-align: @align;
+}
+a{
+  &::hover{
+    text-decoration: none;
+  }
+}
+.bold{
+  font-weight: bold;
+}
+.bs{
+  font-size: 3rem;
+}
+.media(@width, @rules) {
+  @media screen and (max-width: @width) {
+    @rules();
+  }
+}

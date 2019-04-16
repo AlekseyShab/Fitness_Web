@@ -1,0 +1,45 @@
+.beforeAfter{
+    position: relative;
+    z-index: -22;
+    background: url('../images/backgroundblue.png') no-repeat center/cover;
+    color:@color-white;
+    &__title{
+        text-align: center;
+        font-weight: 300;
+    }
+}
+.persons{
+    display: flex;
+    padding-left:9.5rem;
+    flex-wrap: wrap;
+    
+    .media(768px, {
+        padding-left: 20rem;
+      });
+      .media(375px, {
+        padding:0 0.8rem;
+      });
+}
+.person-item{
+    position: relative;
+    padding:0 5rem 0 0;
+    margin: 0 0 5rem 0;
+    &__befAft{
+        display: flex;
+        position: absolute;
+        bottom:1%;
+        z-index: 11;
+        font-size: 2.4rem;
+        .before{
+            background:@color-black;
+            color:@color-yellow;
+            padding: 1.5rem 7.5rem 1.3rem 7.5rem;
+        }
+        .after{
+            background:@color-yellow;
+            color:@color-black;
+            padding: 1.7rem 5.9rem 1.5rem 5.7rem;
+        }
+    }
+    
+}

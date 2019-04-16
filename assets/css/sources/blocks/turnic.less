@@ -1,0 +1,229 @@
+.turnic {
+    display: flex;
+    background: url('../images/background-white.png') no-repeat center/cover;
+}
+
+.turnic-men {
+    display: flex;
+    padding: 1.2rem 0 0 0;
+    &__price {
+        position: relative;
+        width: 61rem;
+        .men {
+            position: absolute;
+            bottom: 0;
+            left: 45%;
+            width: 26.5rem;
+            height: 40rem;
+            background: url('../images/men.png') no-repeat center/cover;
+        }
+        .discount {
+            position: absolute;
+            top: 0.2rem;
+            left: 29%;
+            display: flex;
+            flex-direction: column;
+            width: 12.5rem;
+            height: 12.5rem;
+            border-radius: 50%;
+            background: url('../images/elipsyellow.png') no-repeat center/cover;
+            padding: 3.5rem 0;
+            text-align: center;
+
+            &__text {
+                font-size: 2.2rem;
+                font-weight: 300;
+                &--red {
+                    font-size: 3rem;
+                    color: #cb0000;
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+    &__rotate {
+        display: flex;
+        align-items: center;
+        position: relative;
+        width: 20.3rem;
+        margin-top: 1.8rem;
+    }
+    &__arrow {
+        margin-right: 2rem;
+        width: 3rem;
+        height: 3rem;
+    }
+    &__text--bold {
+        font-weight: 500;
+    }
+
+}
+
+.form-container {
+    padding-top: 0.8rem;
+    &__title {
+        padding: 0.7rem 3rem;
+        width: 35rem;
+        text-align: center;
+        color: @color-white;
+        background: url('../images/backelementyellow.png') no-repeat center/cover;
+        opacity: 0.8;
+        font-weight: 300;
+    }
+    .big-text {
+        font-size: 2.4rem;
+        font-weight: 400;
+    }
+    &__discountTimer {
+        margin: 1.5rem 0 1rem 0;
+        display: flex;
+        width: 35rem;
+        .discount {
+            position: relative;
+            padding: 1.8rem 1.6rem 1.8rem 1.4rem;
+            display: flex;
+            flex-direction: column;
+            background: @color-yellow;
+            text-align: center;
+            &__stock {
+                font-weight: 600;
+            }
+            &__procent {
+                font-size: 2.4rem;
+                font-weight: 600;
+                color: @color-red;
+            }
+            &::before {
+                position: absolute;
+                content: "";
+                width: 1rem;
+                height: 1rem;
+                background: @color-yellow;
+                top: -0.6rem;
+                left: 43%;
+                transform: translateX(-50%);
+                transform: rotate(45deg);
+            }
+        }
+        .timer {
+            display: flex;
+            flex-direction: column;
+            background: @color-white;
+            padding: 1.4rem 1.9rem;
+            &__title {
+                flex-basis: 100%;
+            }
+            &__clock {
+                font-size: 3.6rem;
+                color: @color-red;
+            }
+            &__describe {
+                font-size: 1.4rem;
+            }
+            .timer-p {
+                padding-right: 4.2rem;
+            }
+            .timer-pt {
+                padding-right: 0.7rem;
+            }
+        }
+
+    }
+
+}
+
+.form {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background: @color-white;
+    padding: 1rem 1rem;
+    &__checkbox {
+        position: relative;
+        font-size: 1.4rem;
+        padding: 0.5rem 1rem;
+        font-weight: 300;
+        input {
+            opacity: 0;
+            position: absolute;
+            z-index: -1;
+        }
+        .describe {
+            width: 2rem;
+            height: 2rem;
+            background: @color-yellow;
+            color: @color-white;
+            border-radius: 50%;
+            position: absolute;
+            right: 0.5%;
+            top: 50%;
+            transform: translateY(-50%);
+            text-decoration: none;
+            text-align: center;
+            padding: 0.2rem 0;
+            cursor: pointer;
+            &:hover {
+                background: @color-red;
+            }
+            &:focus {
+                color: @color-red;
+            }
+        }
+    }
+
+    &__checkbox--red {
+        color: @color-red;
+    }
+    &__checkbox label {
+        display: block;
+        padding: 0 0 0 2rem;
+    }
+    &__checkbox label::before {
+        content: "";
+        position: absolute;
+        width: 2rem;
+        height: 2rem;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+        background: url('/../../images/unchecked.jpg') no-repeat center/contain;
+    }
+    &__checkbox input:checked + label::before {
+        background: url('/../../images/checked.jpg') no-repeat center/contain;
+    }
+
+    &__input {
+        width: 100%;
+        padding-bottom: 1rem;
+    }
+
+    &__input input {
+        padding: 1rem 1.3rem;
+        width: 100%;
+        background: @color-grey;
+        border: 0;
+        outline: none;
+        &:focus {
+            border: 1px solid @color-red;
+        }
+    }
+    &__input input::placeholder {
+        color: @color-dark-grey;
+        font-size: 1.8rem;
+        font-weight: 100;
+
+    }
+    &__btn {
+        margin-top: 1rem;
+        background: url('/../../images/backred.png') no-repeat center/contain;
+        color: @color-white;
+        padding: 2rem 0;
+        font-weight: 300;
+        text-transform: uppercase;
+        font-size: 2.4rem;
+        &:hover {
+            transform: scale(1.05);
+        }
+    }
+}
+

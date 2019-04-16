@@ -1,0 +1,44 @@
+.addition {
+  background: url('../images/background-white.png') no-repeat center/cover;
+  &__title {
+    text-align: center;
+  }
+  .profile {
+    .media(768px, { padding: 0 1rem 2rem 1rem; });
+  }
+}
+
+.cont-text {
+  padding-left: 1.9rem;
+  &__list {
+    .list-items {
+      padding: 0;
+    }
+  }
+  &__description {
+    padding-bottom: 4.4rem;
+  }
+}
+
+.add-prod {
+  position: relative;
+  padding: 0 0 3rem 0;
+  &:hover {
+    transform: scale(1.05);
+  }
+  &__title {
+    text-align: center;
+    width: 30rem;
+    position: absolute;
+    z-index: 11;
+    padding: 1.2rem 5rem;
+    background: @color-black;
+    color: @color-white;
+  }
+  &__image {
+    width: 30rem;
+    height: 22.5rem;
+    z-index: -1;
+  }
+
+}

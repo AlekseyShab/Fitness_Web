@@ -1,0 +1,43 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Helvetica Neue';
+  font-size: 1.8rem;
+  color: @color-black;
+  font-weight: 300;
+}
+
+.container {
+  max-width: 96rem;
+  margin-left: auto;
+  margin-right: auto;
+  .media(375px, {
+    max-width: 37.5rem;
+  });
+  .media(768px, {
+    max-width: 76.8rem;
+  });
+}
+h2{
+  font-size: 3.6rem;
+  margin:0;
+  font-weight: 300;
+  padding:4.4rem 0;
+}
+h3{
+  font-size: 3rem;
+  font-weight: bold;
+  margin:0;
+}
+p{
+  margin:0;
+}
+ul{
+  margin:0;
+}

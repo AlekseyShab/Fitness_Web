@@ -1,0 +1,38 @@
+.feedbacks{
+    background: url('../images/background-white.png') no-repeat center/cover;
+    padding: 0 0 3.8rem 0;
+    &__title{
+        text-align: center;
+    }
+}
+.feedback{
+    display:flex;
+    padding-bottom: 3.1rem;
+    &--mirror{
+        flex-direction: row-reverse;
+    }
+    &-wrap{
+        .media(768px, {
+            padding: 0 1rem;
+          });
+    }
+}
+.feedback__img{
+    width: 13rem;
+    height: 13rem;
+}
+
+.feedback__content{
+    position: relative;
+    padding: 0 0 0 1.8rem;
+    font-weight: 100;
+    .signature{
+        position: absolute;
+        color:#003366;
+        bottom: 0;
+        right: 0;
+        &--mirror{
+            right:1.8rem;
+        }
+    }
+}
